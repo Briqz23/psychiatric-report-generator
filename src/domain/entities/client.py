@@ -23,9 +23,10 @@ class SEX(Enum):
 
 class Client:
 
-    def __init__(self, name: str, cpf: str, age: AGE, education_level: EDUCATION_LEVEL, sex: SEX, date: int,
+    def __init__(self, termos: bool, name: str, cpf: str, age: AGE, education_level: EDUCATION_LEVEL, sex: SEX, date: int,
                  state: str, job: str, role: str, depression_score: float, anxiety_score: float, stress_score: float,
                  suggestion: str, mail: str):
+        self.termos = termos
         self.name = name
         self.cpf = cpf
         self.age = age
