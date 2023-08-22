@@ -11,7 +11,7 @@ class EDUCATION_LEVEL(Enum):
 class AGE(Enum):
     ATE_18 = "até 18"
     ENTRE_19_30 = "19-30"
-    ENTRE_31_40 = "31-40"
+    ENTRE_31_40 = "31-40"   
     ENTRE_41_50 = "41-50"
     ENTRE_51_60 = "51-60"
     ENTRE_61_70 = "61-70"
@@ -23,12 +23,12 @@ class SEX(Enum):
 
 class Client:
 
-    def __init__(self, termos: bool, name: str, cpf: str, age: AGE, education_level: EDUCATION_LEVEL, sex: SEX, date: int,
+    def __init__(self, termos: bool, name: str, mail: str, age: AGE, education_level: EDUCATION_LEVEL, sex: SEX, date: int,
                  state: str, job: str, role: str, depression_score: float, anxiety_score: float, stress_score: float,
-                 suggestion: str, mail: str):
+                 suggestion: str, mail_confirmation: str):
         self.termos = termos
         self.name = name
-        self.cpf = cpf
+        self.mail = mail
         self.age = age
         self.education_level = education_level
         self.sex = sex
@@ -40,13 +40,13 @@ class Client:
         self.anxiety_score = anxiety_score
         self.stress_score = stress_score
         self.suggestion = suggestion
-        self.mail = mail
+        self.mail_confirmation = mail_confirmation
 
     def __str__(self):
-        return f"Client(name={self.name}, cpf={self.cpf}, age={self.age}, education_level={self.education_level}, " \
+        return f"Client(name={self.name}, mail={self.mail}, age={self.age}, education_level={self.education_level}, " \
                f"sex={self.sex}, date={self.date}, state={self.state}, job={self.job}, role={self.role}, " \
                f"depression_score={self.depression_score}, anxiety_score={self.anxiety_score}, " \
-               f"stress_score={self.stress_score}, suggestion={self.suggestion}, mail={self.mail})"
+               f"stress_score={self.stress_score}, suggestion={self.suggestion}, mail_confirmation={self.mail_confirmation})"
 
 client1 = Client(name="John Doe", cpf="12345678900", age=AGE.ENTRE_19_30, education_level=EDUCATION_LEVEL.SUPERIOR_COMPLETO,
                  sex=SEX.MAN, date=1990, state="California", job="Software Engineer", role="Developer",
